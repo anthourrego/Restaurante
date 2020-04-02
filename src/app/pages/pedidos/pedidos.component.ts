@@ -19,12 +19,12 @@ export class PedidosComponent implements OnInit {
     ){ 
     
     this.formulario = this.formBuilder.group({
-      nombres: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
-      apellidos: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
-      telefono: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
-      correo: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
-      direccion: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
-      acepto: new FormControl("", {validators: Validators.required, updateOn: 'blur'}),
+      nombres: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
+      apellidos: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
+      telefono: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
+      correo: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
+      direccion: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
+      acepto: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
       categoria: new FormControl(0, {validators: Validators.required, updateOn: 'blur'})
     }, {updateOn: 'change'});
     

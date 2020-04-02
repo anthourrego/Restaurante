@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <!-- <form [formGroup]="formulario" (ngSubmit)="funcionSubmit()" novalidate>
+    <div class="form-row">
+      <div class="form-group col-6">
+        <label for="nombres">Nombres</label>
+        <input formControlName="nombres" class="form-control" type="text" placeholder="Escribe tus nombres" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="apellidos">Apellidos</label>
+        <input formControlName="apellidos" class="form-control" type="text" placeholder="Escribe tus apellidos" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="telefono">Teléfono</label>
+        <input formControlName="telefono" class="form-control" type="tel" placeholder="Ejem. 3215487..." required>
+      </div>
+      <div class="form-group col-6">
+        <label for="correo">Correo Electrónico</label>
+        <input formControlName="correo" class="form-control" type="email" placeholder="Escribe tu correo electronico" required>
+      </div>
+      <div class="form-group col-6">
+        <label for="direccion">Dirección</label>
+        <input formControlName="direccion" class="form-control" type="text" placeholder="Escribe la dirección de tu casa" required>
+      </div>
+      <div class="col-6">
+        <label for="categoria">Categoria</label>
+        <select class="custom-select" formControlName="categoria">
+          <option disabled selected value="0">Seleccione una opción</option>
+          <option *ngFor="let cat of datosSelect" [value]="cat['id']">{{cat['nombre']}}</option>
+        </select>
+      </div>
+      <div class="form-group col-12">
+        <div class="custom-control custom-checkbox">
+          <input formControlName="acepto" class="custom-control-input" type="checkbox" id="gridCheck">
+          <label class="custom-control-label" for="gridCheck">
+            Acepta Términos y Condiciones.
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button type="reset" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Restaurar</button>
+      <button type="submit" class="btn btn-success" [disabled]="!formulario.valid"><i class="fas fa-paper-plane"></i> Enviar</button>
+    </div>
+  </form> -->
+
+  <div *ngFor="let producto of vec">
+    <p>{{producto.nombre}}</p>
+  </div>
+</div>

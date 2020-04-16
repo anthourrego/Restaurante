@@ -8,16 +8,23 @@ import { GetProductosService } from '../../services/get-productos.service';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
-  
+  public titulo1:string;
+  public descripcion:string;
+  public nombre:string = '';
+
   formulario;
   datosSelect;
   vec:any;
+
+
   
   constructor(
     private formBuilder: FormBuilder,
     private _productos:GetProductosService
     ){ 
-    
+      this.titulo1 = 'funca';
+      this.descripcion = 'no funca x2';
+
     this.formulario = this.formBuilder.group({
       nombres: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
       apellidos: new FormControl('', {validators: Validators.required, updateOn: 'blur'}),
@@ -28,12 +35,12 @@ export class PedidosComponent implements OnInit {
       categoria: new FormControl(0, {validators: Validators.required, updateOn: 'blur'})
     }, {updateOn: 'change'});
     
-    this._productos.getProductos().subscribe(resp=>{
+    /* this._productos.getProductos().subscribe(resp=>{
       console.log(resp);
       if (resp["success"] == true) {
         this.vec = resp['mensaje']; 
       }
-    });
+    }); */
     /* this._productos.getProductos().then(resultado=>{
       console.log(resultado);
     },
@@ -48,6 +55,10 @@ export class PedidosComponent implements OnInit {
 
   funcionSubmit(){
     console.log(this.formulario.value);
+  }
+
+  resp(resp){
+    this.nombre = resp;
   }
 
   /* listarPlatos(){

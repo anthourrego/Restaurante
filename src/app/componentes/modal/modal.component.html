@@ -1,0 +1,24 @@
+<!-- Modal -->
+<div class="modal fade" #modalMurcielago id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form [formGroup]="formularioMurcielago" (ngSubmit)="enviar()" novalidate>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="palabra">Palabra</label>
+            <input formControlName="palabra" class="form-control" type="text" placeholder="Escribe la palabra" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" [disabled]="!formularioMurcielago.valid"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

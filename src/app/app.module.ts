@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { GetProductosService } from './services/get-productos.service';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
+import { ModalComponent } from './componentes/modal/modal.component';
+import { MayusculasPipe } from './pipe/mayusculas.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CalculadoraComponent } from './pages/calculadora/calculadora.component'
     ProductosComponent,
     PedidosComponent,
     CalculadoraComponent,
+    ModalComponent,
+    MayusculasPipe,
   ],
   imports: [
     BrowserModule,

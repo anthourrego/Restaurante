@@ -43,7 +43,16 @@
     </div>
   </form> -->
 
-  <div *ngFor="let producto of vec">
+  <!-- <div *ngFor="let producto of vec">
     <p>{{producto.nombre}}</p>
-  </div>
+  </div> -->
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    MURCIELAGO
+  </button>
+  <app-modal [titulo]="titulo1" [descripcion]="descripcion" (enviarRespuesta)="resp($event)"></app-modal>
+
+  <h5 class="mt-5">{{ nombre | mayusculas }}</h5>
+
 </div>

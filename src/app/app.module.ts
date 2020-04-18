@@ -14,6 +14,8 @@ import { GetProductosService } from './services/get-productos.service';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
 import { ModalComponent } from './componentes/modal/modal.component';
 import { MayusculasPipe } from './pipe/mayusculas.pipe';
+import { CarritoCompraComponent } from './componentes/carrito-compra/carrito-compra.component';
+import { ModalCarritoComponent } from './componentes/carrito-compra/modal-carrito/modal-carrito.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { MayusculasPipe } from './pipe/mayusculas.pipe';
     CalculadoraComponent,
     ModalComponent,
     MayusculasPipe,
+    CarritoCompraComponent,
+    ModalCarritoComponent,
   ],
   imports: [
     BrowserModule,
